@@ -11,7 +11,8 @@ const players = [
       "assists": 18,
       "caps": 102
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6876/1-dalglish-1.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6876/1-dalglish-1.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland's most capped outfield player and Liverpool's greatest ever striker."
   },
   {
     "id": "denis_law",
@@ -25,7 +26,8 @@ const players = [
       "assists": 18,
       "caps": 55
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6874/2-law.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6874/2-law.jpg?mode=max&width=787&format=webp",
+    "bio": "The Lawman - European Footballer of the Year and Manchester United legend."
   },
   {
     "id": "james_mcfadden",
@@ -39,7 +41,8 @@ const players = [
       "assists": 9,
       "caps": 48
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6873/3-mcfadden.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6873/3-mcfadden.jpg?mode=max&width=787&format=webp",
+    "bio": "Scored one of Scotland's greatest ever goals against France in 2007."
   },
   {
     "id": "jim_baxter",
@@ -53,7 +56,8 @@ const players = [
       "assists": 2,
       "caps": 34
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6872/4-baxter.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6872/4-baxter.jpg?mode=max&width=787&format=webp",
+    "bio": "Slim Jim - the most naturally gifted Scottish footballer of his generation."
   },
   {
     "id": "ally_mccoist",
@@ -67,7 +71,8 @@ const players = [
       "assists": 11,
       "caps": 61
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6871/5-mccoist.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6871/5-mccoist.jpg?mode=max&width=787&format=webp",
+    "bio": "Rangers' all-time top scorer with 355 goals and Scotland's record goalscorer."
   },
   {
     "id": "davie_cooper",
@@ -81,7 +86,8 @@ const players = [
       "assists": 4,
       "caps": 22
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6870/6-cooper.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6870/6-cooper.jpg?mode=max&width=787&format=webp",
+    "bio": "The Coop - magical winger whose skill and flair lit up Ibrox for over a decade."
   },
   {
     "id": "billy_bremner",
@@ -95,7 +101,8 @@ const players = [
       "assists": 2,
       "caps": 54
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6869/7-bremner.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6869/7-bremner.jpg?mode=max&width=787&format=webp",
+    "bio": "Leeds United's inspirational captain who led them to multiple league titles."
   },
   {
     "id": "graeme_souness",
@@ -109,7 +116,8 @@ const players = [
       "assists": 2,
       "caps": 54
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6868/8-souness.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6868/8-souness.jpg?mode=max&width=787&format=webp",
+    "bio": "Tough-tackling midfielder who won three European Cups with Liverpool."
   },
   {
     "id": "archie_gemmill",
@@ -123,7 +131,8 @@ const players = [
       "assists": 5,
       "caps": 43
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6867/9-a-gemmill.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6867/9-a-gemmill.jpg?mode=max&width=787&format=webp",
+    "bio": "Scored Scotland's greatest World Cup goal in the 3-2 win over Netherlands in 1978."
   },
   {
     "id": "joe_jordan",
@@ -137,7 +146,8 @@ const players = [
       "assists": 7,
       "caps": 52
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6866/10-jordan.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6866/10-jordan.jpg?mode=max&width=787&format=webp",
+    "bio": "Jaws - powerful striker who terrorized defenses for Leeds and Scotland."
   },
   {
     "id": "darren_fletcher",
@@ -151,7 +161,8 @@ const players = [
       "assists": 3,
       "caps": 80
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6865/11-d-fletcher.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6865/11-d-fletcher.jpg?mode=max&width=787&format=webp",
+    "bio": "Versatile midfielder who won multiple Premier League titles with Manchester United."
   },
   {
     "id": "scott_brown",
@@ -165,7 +176,8 @@ const players = [
       "assists": 2,
       "caps": 55
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6864/12-brown.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6864/12-brown.jpg?mode=max&width=787&format=webp",
+    "bio": "Celtic's tenacious captain who led the club to nine consecutive league titles."
   },
   {
     "id": "willie_miller",
@@ -179,7 +191,8 @@ const players = [
       "assists": 0,
       "caps": 65
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6863/13-w-miller.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6863/13-w-miller.jpg?mode=max&width=787&format=webp",
+    "bio": "Aberdeen's legendary captain who led them to European Cup Winners' Cup glory."
   },
   {
     "id": "jim_leighton",
@@ -193,7 +206,8 @@ const players = [
       "assists": 0,
       "caps": 91
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6862/14-leighton.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6862/14-leighton.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland's most capped goalkeeper with 91 appearances between the posts."
   },
   {
     "id": "jimmy_johnstone",
@@ -207,7 +221,8 @@ const players = [
       "assists": 2,
       "caps": 23
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6861/15-johnstone.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6861/15-johnstone.jpg?mode=max&width=787&format=webp",
+    "bio": "Jinky - the Lisbon Lion whose dribbling skills mesmerized defenders."
   },
   {
     "id": "julie_fleeting",
@@ -221,7 +236,8 @@ const players = [
       "assists": 70,
       "caps": 121
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6860/16-fleeting.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6860/16-fleeting.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland women's all-time top scorer with 116 goals in 121 caps."
   },
   {
     "id": "danny_mcgrain",
@@ -235,7 +251,8 @@ const players = [
       "assists": 0,
       "caps": 62
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6859/17-mcgrain.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6859/17-mcgrain.jpg?mode=max&width=787&format=webp",
+    "bio": "Celtic's legendary full-back who overcame diabetes to become a club icon."
   },
   {
     "id": "john_collins",
@@ -249,7 +266,8 @@ const players = [
       "assists": 7,
       "caps": 58
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6858/18-collins.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6858/18-collins.jpg?mode=max&width=787&format=webp",
+    "bio": "Elegant midfielder who won the French league title with Monaco."
   },
   {
     "id": "colin_hendry",
@@ -263,7 +281,8 @@ const players = [
       "assists": 2,
       "caps": 51
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6857/19-hendry.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6857/19-hendry.jpg?mode=max&width=787&format=webp",
+    "bio": "Braveheart - commanding center-back who led Scotland to Euro 96 and World Cup 98."
   },
   {
     "id": "barry_ferguson",
@@ -277,7 +296,8 @@ const players = [
       "assists": 2,
       "caps": 45
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6856/20-b-ferguson.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6856/20-b-ferguson.jpg?mode=max&width=787&format=webp",
+    "bio": "Rangers' creative midfielder and captain who won multiple domestic trebles."
   },
   {
     "id": "kim_little",
@@ -291,7 +311,8 @@ const players = [
       "assists": 35,
       "caps": 140
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6855/21-little.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6855/21-little.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland women's most capped player and Arsenal's midfield maestro."
   },
   {
     "id": "paul_mcstay",
@@ -305,7 +326,8 @@ const players = [
       "assists": 5,
       "caps": 76
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6854/22-mcstay.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6854/22-mcstay.jpg?mode=max&width=787&format=webp",
+    "bio": "Celtic's one-club man who spent his entire career at Parkhead as playmaker."
   },
   {
     "id": "alex_mcleish",
@@ -319,7 +341,8 @@ const players = [
       "assists": 0,
       "caps": 77
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6853/23-mcleish.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6853/23-mcleish.jpg?mode=max&width=787&format=webp",
+    "bio": "Big Eck - Aberdeen's granite defender who won European trophies under Fergie."
   },
   {
     "id": "andy_goram",
@@ -333,7 +356,8 @@ const players = [
       "assists": 0,
       "caps": 43
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6852/24-goram.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6852/24-goram.jpg?mode=max&width=787&format=webp",
+    "bio": "The Goalie - Rangers' legendary keeper who won nine league titles in a row."
   },
   {
     "id": "andy_robertson",
@@ -347,7 +371,8 @@ const players = [
       "assists": 2,
       "caps": 82
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6846/25-a-robertson.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6846/25-a-robertson.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland's current captain and Liverpool's Champions League-winning left-back."
   },
   {
     "id": "kenny_miller",
@@ -361,7 +386,8 @@ const players = [
       "assists": 11,
       "caps": 69
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6845/26-k-miller.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6845/26-k-miller.jpg?mode=max&width=787&format=webp",
+    "bio": "Prolific striker who scored goals for Rangers, Celtic, and Scotland."
   },
   {
     "id": "erin_cuthbert",
@@ -375,7 +401,8 @@ const players = [
       "assists": 14,
       "caps": 74
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6844/27-cuthbert.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6844/27-cuthbert.jpg?mode=max&width=787&format=webp",
+    "bio": "Dynamic midfielder who helped Scotland qualify for their first Women's World Cup."
   },
   {
     "id": "gordon_strachan",
@@ -389,7 +416,8 @@ const players = [
       "assists": 3,
       "caps": 50
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6843/28-strachan.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6843/28-strachan.jpg?mode=max&width=787&format=webp",
+    "bio": "Wee Gordon - Aberdeen's energetic winger who won European Cup Winners' Cup."
   },
   {
     "id": "richard_gough",
@@ -403,7 +431,8 @@ const players = [
       "assists": 4,
       "caps": 61
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6847/29-gough.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6847/29-gough.jpg?mode=max&width=787&format=webp",
+    "bio": "Rangers' defensive rock who captained the club to nine-in-a-row success."
   },
   {
     "id": "christian_dailly",
@@ -417,7 +446,8 @@ const players = [
       "assists": 4,
       "caps": 67
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6841/30-dailly.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6841/30-dailly.jpg?mode=max&width=787&format=webp",
+    "bio": "Versatile defender who could play anywhere across the backline and midfield."
   },
   {
     "id": "roy_aitken",
@@ -431,7 +461,8 @@ const players = [
       "assists": 0,
       "caps": 57
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6840/31-aitken.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6840/31-aitken.jpg?mode=max&width=787&format=webp",
+    "bio": "The Bear - Celtic's inspirational captain and defensive stalwart."
   },
   {
     "id": "billy_mcneill",
@@ -445,7 +476,8 @@ const players = [
       "assists": 2,
       "caps": 29
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6839/32-mcneill.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6839/32-mcneill.jpg?mode=max&width=787&format=webp",
+    "bio": "Caesar - Celtic's greatest captain who lifted the European Cup in 1967."
   },
   {
     "id": "craig_gordon",
@@ -459,7 +491,8 @@ const players = [
       "assists": 0,
       "caps": 81
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6838/33-gordon.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6838/33-gordon.jpg?mode=max&width=787&format=webp",
+    "bio": "Hearts and Celtic's reliable goalkeeper with over 80 international caps."
   },
   {
     "id": "rachel_corsie",
@@ -473,7 +506,8 @@ const players = [
       "assists": 12,
       "caps": 154
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6837/34-corsie.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6837/34-corsie.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland women's captain and defensive leader with over 150 caps."
   },
   {
     "id": "gary_mcallister",
@@ -487,7 +521,8 @@ const players = [
       "assists": 3,
       "caps": 57
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6835/36-mcallister.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6835/36-mcallister.jpg?mode=max&width=787&format=webp",
+    "bio": "Elegant playmaker who won the UEFA Cup with Liverpool at age 36."
   },
   {
     "id": "tom_boyd",
@@ -501,7 +536,8 @@ const players = [
       "assists": 0,
       "caps": 72
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6836/35-boyd.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6836/35-boyd.jpg?mode=max&width=787&format=webp",
+    "bio": "Celtic's consistent left-back who won multiple league titles and cups."
   },
   {
     "id": "david_narey",
@@ -515,7 +551,8 @@ const players = [
       "assists": 0,
       "caps": 35
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6834/37-narey.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6834/37-narey.jpg?mode=max&width=787&format=webp",
+    "bio": "Dundee United's one-club man who scored Scotland's first goal at World Cup 82."
   },
   {
     "id": "john_mcginn",
@@ -529,7 +566,8 @@ const players = [
       "assists": 12,
       "caps": 75
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6833/38-mcginn.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6833/38-mcginn.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland's current midfield dynamo who helped end the 23-year major tournament drought."
   },
   {
     "id": "john_greig",
@@ -543,7 +581,8 @@ const players = [
       "assists": 2,
       "caps": 44
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6830/40-greig.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6830/40-greig.jpg?mode=max&width=787&format=webp",
+    "bio": "Rangers' greatest ever player who captained the club to European Cup Winners' Cup."
   },
   {
     "id": "jen_beattie",
@@ -557,7 +596,8 @@ const players = [
       "assists": 14,
       "caps": 144
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6832/40-beattie.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6832/40-beattie.jpg?mode=max&width=787&format=webp",
+    "bio": "Arsenal and Scotland's commanding center-back with over 140 international caps."
   },
   {
     "id": "gemma_fay",
@@ -571,7 +611,8 @@ const players = [
       "assists": 0,
       "caps": 203
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6831/41-fay.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6831/41-fay.jpg?mode=max&width=787&format=webp",
+    "bio": "Scotland women's most capped player with over 200 appearances in goal."
   },
   {
     "id": "steve_archibald",
@@ -585,7 +626,8 @@ const players = [
       "assists": 2,
       "caps": 27
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6829/42-archibald.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6829/42-archibald.jpg?mode=max&width=787&format=webp",
+    "bio": "Tottenham's European hero who also won La Liga with Barcelona."
   },
   {
     "id": "lawrie_reilly",
@@ -599,7 +641,8 @@ const players = [
       "assists": 13,
       "caps": 38
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6828/43-reilly.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6828/43-reilly.jpg?mode=max&width=787&format=webp",
+    "bio": "Hibs' legendary striker who scored 22 goals in just 38 Scotland appearances."
   },
   {
     "id": "hughie_gallacher",
@@ -613,7 +656,8 @@ const players = [
       "assists": 14,
       "caps": 20
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6827/44-gallacher.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6827/44-gallacher.jpg?mode=max&width=787&format=webp",
+    "bio": "Wembley Wizard who scored 24 goals in 20 caps during the 1920s."
   },
   {
     "id": "allan_mcgregor",
@@ -627,7 +671,8 @@ const players = [
       "assists": 0,
       "caps": 42
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6826/45-a-mcgregor.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6826/45-a-mcgregor.jpg?mode=max&width=787&format=webp",
+    "bio": "Rangers' reliable goalkeeper who won multiple league titles and cups."
   },
   {
     "id": "dave_mackay",
@@ -641,7 +686,8 @@ const players = [
       "assists": 2,
       "caps": 22
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6825/46-mackay.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6825/46-mackay.jpg?mode=max&width=787&format=webp",
+    "bio": "Tottenham's double-winning captain and one of Scotland's greatest defenders."
   },
   {
     "id": "paul_lambert",
@@ -655,7 +701,8 @@ const players = [
       "assists": 0,
       "caps": 40
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6824/47-lambert.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6824/47-lambert.jpg?mode=max&width=787&format=webp",
+    "bio": "First British player to win the Champions League with a foreign club (Dortmund)."
   },
   {
     "id": "mo_johnston",
@@ -669,7 +716,8 @@ const players = [
       "assists": 8,
       "caps": 38
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6823/48-johnston.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6823/48-johnston.jpg?mode=max&width=787&format=webp",
+    "bio": "Controversial striker who scored goals for Celtic, Rangers, and Nantes."
   },
   {
     "id": "maurice_malpas",
@@ -683,7 +731,8 @@ const players = [
       "assists": 0,
       "caps": 55
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6822/49-malpas.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6822/49-malpas.jpg?mode=max&width=787&format=webp",
+    "bio": "Dundee United's consistent full-back who won the Premier League title."
   },
   {
     "id": "alan_hansen",
@@ -697,7 +746,8 @@ const players = [
       "assists": 0,
       "caps": 26
     },
-    "photoUrl": "https://www.scottishfa.co.uk/media/6821/50-hansen.jpg?mode=max&width=787&format=webp"
+    "photoUrl": "https://www.scottishfa.co.uk/media/6821/50-hansen.jpg?mode=max&width=787&format=webp",
+    "bio": "Liverpool's elegant defender who won eight league titles and three European Cups."
   }
 ];
 
