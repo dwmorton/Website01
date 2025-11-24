@@ -14,6 +14,9 @@ const TEAM_BUDGET = 100; // £100m budget
 
 const app = express();
 
+// Trust proxy for Render (needed for secure cookies and correct IP addresses)
+app.set('trust proxy', 1);
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -27,8 +30,9 @@ const sessionConfig = {
   saveUninitialized: false,
   cookie: { 
     maxAge: 1000 * 60 * 60 * 24,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax'
+    secure: process.env.NODE_ENV === 'production' ? 'auto' : false,
+    sameSite: 'lax',
+    httpOnly: true
   }
 };
 
@@ -84,22 +88,32 @@ const dbGet = async (sql, params = []) => {
 
 async function loadUser(userId) {
   if (!userId) return null;
-  return dbGet('SELECT id, name, email FROM users WHERE id = ?', [userId]);
+  try {
+    return await dbGet('SELECT id, name, email FROM users WHERE id = ?', [userId]);
+  } catch (err) {
+    console.error('Error loading user:', err);
+    return null;
+  }
 }
 
 async function loadTeam(userId) {
   if (!userId) return null;
-  const team = await dbGet('SELECT * FROM teams WHERE user_id = ?', [userId]);
-  if (!team) return null;
-  return {
-    ...team,
-    total_value: Number(team.total_value),
-    players: JSON.parse(team.players_json)
-  };
+  try {
+    const team = await dbGet('SELECT * FROM teams WHERE user_id = ?', [userId]);
+    if (!team) return null;
+    return {
+      ...team,
+      total_value: Number(team.total_value),
+      players: JSON.parse(team.players_json)
+    };
+  } catch (err) {
+    console.error('Error loading team:', err);
+    return null;
+  }
 }
 
 function requireAuth(req, res, next) {
-  if (!req.session.userId) {
+  if (!req.session || !req.session.userId) {
     return res.redirect('/login');
   }
   return next();
@@ -117,6 +131,16 @@ function buildSelectedPlayers(playerIds) {
     .map((id) => players.find((p) => p.id === id))
     .filter(Boolean);
 }
+
+app.get('/health', async (req, res) => {
+  try {
+    // Test database connection
+    await dbGet('SELECT 1 as test');
+    res.json({ status: 'ok', database: process.env.DATABASE_URL ? 'postgresql' : 'sqlite' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
 
 app.get('/', async (req, res) => {
   const user = await loadUser(req.session.userId);
@@ -186,14 +210,25 @@ app.post('/logout', (req, res) => {
   });
 });
 
-app.get('/dashboard', requireAuth, async (req, res) => {
-  const user = await loadUser(req.session.userId);
-  const team = await loadTeam(user.id);
-  let selectedPlayers = [];
-  if (team) {
-    selectedPlayers = buildSelectedPlayers(team.players);
+app.get('/dashboard', requireAuth, async (req, res, next) => {
+  try {
+    const user = await loadUser(req.session.userId);
+    if (!user) {
+      req.session.destroy(() => {
+        return res.redirect('/login');
+      });
+      return;
+    }
+    const team = await loadTeam(user.id);
+    let selectedPlayers = [];
+    if (team) {
+      selectedPlayers = buildSelectedPlayers(team.players);
+    }
+    res.render('dashboard', { user, team, selectedPlayers, players, budget: TEAM_BUDGET });
+  } catch (err) {
+    console.error('Dashboard error:', err);
+    next(err);
   }
-  res.render('dashboard', { user, team, selectedPlayers, players, budget: TEAM_BUDGET });
 });
 
 app.get('/team-builder', requireAuth, async (req, res) => {
@@ -315,6 +350,16 @@ app.post('/team/email', requireAuth, async (req, res) => {
   }
 
   res.redirect('/dashboard');
+});
+
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).render('error', { 
+    user: res.locals.currentUser,
+    error: process.env.NODE_ENV === 'production' 
+      ? 'An error occurred. Please try again.' 
+      : err.message 
+  });
 });
 
 app.use((req, res) => {

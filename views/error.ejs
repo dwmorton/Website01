@@ -1,0 +1,13 @@
+<%- include('partials/page-top', { title: 'Error' }) %>
+<section class="empty-state">
+  <h1>Something went wrong</h1>
+  <p><%= error %></p>
+  <div>
+    <a class="button" href="/">Home</a>
+    <% if (user) { %>
+      <a class="button secondary" href="/dashboard">Dashboard</a>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/page-bottom') %>
+
