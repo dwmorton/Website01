@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> · Fantasy Scottish League</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <% const headExtras = typeof extraHead !== 'undefined' ? extraHead : null; %>
+    <% if (headExtras) { %>
+      <%- headExtras %>
+    <% } %>
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <a class="brand" href="/">Fantasy Scottish League</a>
+        <p class="tagline">Build your ultimate XI of Scottish greats</p>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <% if (currentUser) { %>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/team-builder">Team Builder</a>
+          <form method="POST" action="/logout">
+            <button type="submit" class="linkish">Log out</button>
+          </form>
+        <% } else { %>
+          <a href="/login">Log in</a>
+          <a class="button" href="/register">Get started</a>
+        <% } %>
+      </nav>
+    </header>
+    <main class="container">
+      <% if (flash) { %>
+        <div class="flash"><%= flash.message %></div>
+      <% } %>
+

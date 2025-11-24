@@ -1,0 +1,69 @@
+<%- include('partials/page-top', { title: 'Dashboard' }) %>
+<section>
+  <h1>Hi <%= user.name %>!</h1>
+  <% if (!team) { %>
+    <p>You have not drafted a team yet.</p>
+    <a class="button" href="/team-builder">Create your XI</a>
+  <% } else { %>
+    <div class="team-summary">
+      <div>
+        <p>Team name</p>
+        <h2><%= team.team_name %></h2>
+      </div>
+      <div>
+        <p>Squad value</p>
+        <h2>£<%= team.total_value.toFixed(1) %>m</h2>
+      </div>
+      <div class="actions">
+        <a class="button" href="/team-builder">Edit team</a>
+        <a class="button secondary" href="/team/pdf">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Pos</th>
+            <th>Club</th>
+            <th>Value (£m)</th>
+            <th>Stats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% selectedPlayers.forEach((player) => { %>
+            <tr>
+              <td class="player-cell">
+                <img src="<%= player.photoUrl %>" alt="<%= player.name %>" />
+                <div>
+                  <strong><%= player.name %></strong><br />
+                  <small><%= player.era %></small>
+                </div>
+              </td>
+              <td><%= player.position %></td>
+              <td><%= player.club %></td>
+              <td>£<%= player.value.toFixed(1) %>m</td>
+              <td>
+                <small>Goals: <%= player.stats.goals %></small><br />
+                <small>Assists: <%= player.stats.assists %></small><br />
+                <small>Caps: <%= player.stats.caps %></small>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="email-card">
+      <h3>Email your printable A4 team sheet</h3>
+      <form method="POST" action="/team/email" class="form-inline">
+        <input type="email" name="email" required value="<%= user.email %>" />
+        <button type="submit" class="button">Send PDF</button>
+      </form>
+      <p>We’ll generate the PDF on the fly and email it to you.</p>
+    </section>
+  <% } %>
+</section>
+<%- include('partials/page-bottom') %>
+

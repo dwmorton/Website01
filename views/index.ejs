@@ -1,0 +1,50 @@
+<%- include('partials/page-top', { title: 'Home' }) %>
+<section class="hero">
+  <div>
+    <h1>Fantasy Football, Scottish style</h1>
+    <p>Create a personalised XI using the greatest Scottish footballers since 1980.</p>
+    <% if (!currentUser) { %>
+      <a class="button" href="/register">Build your team</a>
+    <% } else { %>
+      <a class="button" href="/dashboard">View your squad</a>
+    <% } %>
+  </div>
+  <div class="hero-card">
+    <p>Budget</p>
+    <h2>£<%= budget %>m</h2>
+    <p>Pick exactly 11 players under budget.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Featured Scottish stars</h2>
+  <div class="player-grid">
+    <% players.slice(0, 6).forEach((player) => { %>
+      <article class="player-card">
+        <img src="<%= player.photoUrl %>" alt="<%= player.name %>" loading="lazy" />
+        <div>
+          <h3><%= player.name %></h3>
+          <p><strong><%= player.position %></strong> · <%= player.club %></p>
+          <p>Value: £<%= player.value %>m</p>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<section class="steps">
+  <div>
+    <h3>1. Register</h3>
+    <p>Create an account with your name, email and password.</p>
+  </div>
+  <div>
+    <h3>2. Draft</h3>
+    <p>Select 11 Scottish greats using live budget tracking.</p>
+  </div>
+  <div>
+    <h3>3. Share</h3>
+    <p>Generate a printable PDF and email it to yourself.</p>
+  </div>
+</section>
+<%- include('partials/page-bottom') %>
+

@@ -1,0 +1,62 @@
+<%- include('partials/page-top', {
+  title: 'Team Builder',
+  extraHead: '<script defer src="/js/team-builder.js"></script>'
+}) %>
+<section class="builder">
+  <div class="builder-summary">
+    <h1>Draft your XI</h1>
+    <p>Budget: £<%= budget %>m · Pick exactly 11 players</p>
+    <% if (error) { %>
+      <div class="error"><%= error %></div>
+    <% } %>
+    <form method="POST" action="/team-builder" id="team-form">
+      <label>
+        Team name
+        <input type="text" name="teamName" value="<%= teamName %>" required />
+      </label>
+      <div class="selection-stats">
+        <div>
+          <p>Players picked</p>
+          <strong id="selected-count"><%= selectedIds.length %></strong> / 11
+        </div>
+        <div>
+          <p>Spend</p>
+          <strong>£<span id="spend-total">0.0</span>m</strong>
+        </div>
+        <div>
+          <p>Budget left</p>
+          <strong>£<span id="budget-left">0.0</span>m</strong>
+        </div>
+      </div>
+      <button type="submit" class="button">Save squad</button>
+    </form>
+  </div>
+
+  <div class="player-list" data-budget="<%= budget %>">
+    <% players.forEach((player) => { %>
+      <label class="player-option">
+        <input
+          type="checkbox"
+          name="playerIds"
+          value="<%= player.id %>"
+          <%= selectedIds.includes(player.id) ? 'checked' : '' %>
+          data-value="<%= player.value %>"
+          data-position="<%= player.position %>"
+          form="team-form"
+        />
+        <img src="<%= player.photoUrl %>" alt="<%= player.name %>" loading="lazy" />
+        <div>
+          <h3><%= player.name %></h3>
+          <p><strong><%= player.position %></strong> · <%= player.club %></p>
+          <p>Value: £<%= player.value %>m</p>
+          <p class="stat-line">
+            Goals <%= player.stats.goals %> · Assists <%= player.stats.assists %> · Caps
+            <%= player.stats.caps %>
+          </p>
+        </div>
+      </label>
+    <% }) %>
+  </div>
+</section>
+<%- include('partials/page-bottom') %>
+

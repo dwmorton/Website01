@@ -1,0 +1,21 @@
+<%- include('partials/page-top', { title: 'Login' }) %>
+<section class="auth-card">
+  <h1>Welcome back</h1>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+  <form method="POST" action="/login" class="form">
+    <label>
+      Email
+      <input type="email" name="email" required value="<%= form.email || '' %>" />
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" required />
+    </label>
+    <button type="submit" class="button">Log in</button>
+  </form>
+  <p>Need an account? <a href="/register">Create one</a>.</p>
+</section>
+<%- include('partials/page-bottom') %>
+

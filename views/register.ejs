@@ -1,0 +1,25 @@
+<%- include('partials/page-top', { title: 'Register' }) %>
+<section class="auth-card">
+  <h1>Create your manager profile</h1>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+  <form method="POST" action="/register" class="form">
+    <label>
+      Name
+      <input type="text" name="name" required value="<%= form.name || '' %>" />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" required value="<%= form.email || '' %>" />
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" minlength="8" required />
+    </label>
+    <button type="submit" class="button">Create account</button>
+  </form>
+  <p>Already registered? <a href="/login">Log in</a>.</p>
+</section>
+<%- include('partials/page-bottom') %>
+

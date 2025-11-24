@@ -1,0 +1,15 @@
+<svg width="200" height="240" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Player placeholder</title>
+  <desc id="desc">Abstract silhouette used when no player photo is available.</desc>
+  <defs>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f5fd6"/>
+      <stop offset="100%" stop-color="#0b1c2c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="70" r="50" fill="#d4deed"/>
+  <path d="M30 220c0-55 35-80 70-80s70 25 70 80" fill="url(#shirt)"/>
+  <rect x="64" y="135" width="72" height="55" fill="#fff" opacity="0.2" />
+  <text x="100" y="210" text-anchor="middle" font-size="18" fill="#ffffff" font-family="sans-serif">SCO</text>
+</svg>
+

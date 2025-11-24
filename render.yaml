@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: fantasy-scottish-league
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PORT
+        fromService:
+          type: web
+          name: fantasy-scottish-league
+          property: port
+
+databases:
+  - name: fantasy-db
+    plan: free
+    databaseName: fantasy
+    user: fantasy_user
+
