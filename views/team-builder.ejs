@@ -17,7 +17,7 @@
       <div class="selection-stats">
         <div>
           <p>Players picked</p>
-          <strong id="selected-count"><%= selectedIds.length %></strong> / 11
+          <span class="player-count-value"><strong id="selected-count"><%= selectedIds.length %></strong> / 11</span>
         </div>
         <div>
           <p>Spend</p>
@@ -28,33 +28,65 @@
           <strong>£<span id="budget-left">0.0</span>m</strong>
         </div>
       </div>
-      <button type="submit" class="button">Save squad</button>
+      <button type="submit" class="button" id="save-button" disabled>Save squad</button>
     </form>
   </div>
 
   <div class="player-list" data-budget="<%= budget %>">
-    <% players.forEach((player) => { %>
-      <label class="player-option">
-        <input
-          type="checkbox"
-          name="playerIds"
-          value="<%= player.id %>"
-          <%= selectedIds.includes(player.id) ? 'checked' : '' %>
-          data-value="<%= player.value %>"
-          data-position="<%= player.position %>"
-          form="team-form"
-        />
-        <img src="<%= player.photoUrl %>" alt="<%= player.name %>" loading="lazy" />
-        <div>
-          <h3><%= player.name %></h3>
-          <p><strong><%= player.position %></strong> · <%= player.club %></p>
-          <p>Value: £<%= player.value %>m</p>
-          <p class="stat-line">
-            Goals <%= player.stats.goals %> · Assists <%= player.stats.assists %> · Caps
-            <%= player.stats.caps %>
-          </p>
+    <%
+      const positionGroups = {
+        'GK': { name: 'Goalkeeper', players: [] },
+        'DF': { name: 'Defender', players: [] },
+        'MF': { name: 'Midfielder', players: [] },
+        'FW': { name: 'Forward', players: [] }
+      };
+      
+      players.forEach((player) => {
+        if (positionGroups[player.position]) {
+          positionGroups[player.position].players.push(player);
+        }
+      });
+      
+      const positionOrder = ['GK', 'DF', 'MF', 'FW'];
+    %>
+    <% positionOrder.forEach((pos) => { %>
+      <% if (positionGroups[pos].players.length > 0) { %>
+        <div class="position-group" data-position="<%= pos %>">
+          <h2 class="position-group-title">
+            <%= positionGroups[pos].name %>
+            <span class="position-count" data-position="<%= pos %>">
+              <span class="position-count-current" id="count-<%= pos.toLowerCase() %>">0</span>
+              <span class="position-count-separator">/</span>
+              <span class="position-count-max"><%= pos === 'GK' ? '1' : '4' %></span>
+            </span>
+          </h2>
+          <div class="position-group-players">
+            <% positionGroups[pos].players.forEach((player) => { %>
+              <label class="player-option">
+                <input
+                  type="checkbox"
+                  name="playerIds"
+                  value="<%= player.id %>"
+                  <%= selectedIds.includes(player.id) ? 'checked' : '' %>
+                  data-value="<%= player.value %>"
+                  data-position="<%= player.position %>"
+                  form="team-form"
+                />
+                <img src="<%= player.photoUrl %>" alt="<%= player.name %>" loading="lazy" />
+                <div>
+                  <h3><%= player.name %></h3>
+                  <p><strong><%= player.position %></strong> · <%= player.club %></p>
+                  <p>Value: £<%= player.value %>m</p>
+                  <p class="stat-line">
+                    Goals <%= player.stats.goals %> · Assists <%= player.stats.assists %> · Caps
+                    <%= player.stats.caps %>
+                  </p>
+                </div>
+              </label>
+            <% }) %>
+          </div>
         </div>
-      </label>
+      <% } %>
     <% }) %>
   </div>
 </section>
